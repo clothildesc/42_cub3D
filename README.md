@@ -19,6 +19,8 @@ This project recreates the immersive experience of navigating through a 3D maze 
 
 **📦 Original repository: [BenjaminSuger/CUB3D](https://github.com/BenjaminSuger/CUB3D)**
 
+<img width="1183" height="807" alt="image" src="https://github.com/user-attachments/assets/bac0edbc-625d-47b5-a0c2-85147a8a116c" />
+
 ## 🚀 Features
 
 ### Mandatory Part
