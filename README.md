@@ -228,12 +228,12 @@ The project includes several test maps:
 ## 📝 Map Validation
 
 The parser validates:
-- ✅ Correct file extension (`.cub`)
-- ✅ All required elements (textures, colors, map)
-- ✅ Valid RGB values (0-255)
-- ✅ Closed map (surrounded by walls)
-- ✅ Single player start position
-- ✅ No invalid characters
+- Correct file extension (`.cub`)
+- All required elements (textures, colors, map)
+- Valid RGB values (0-255)
+- Closed map (surrounded by walls)
+- Single player start position
+- No invalid characters
 
 ## 🔍 Raycasting Math
 
@@ -266,23 +266,23 @@ perpendicular_distance = distance * cos(ray_angle - player_angle)
 ## 🎓 Learning Outcomes
 
 This project teaches:
-- ✅ **Raycasting algorithm** and 3D projection
-- ✅ **Graphics programming** with MiniLibX
-- ✅ **Trigonometry** in game development
-- ✅ **Event-driven programming**
-- ✅ **Map parsing** and validation
-- ✅ **Performance optimization** for real-time rendering
-- ✅ **Game loop** and frame timing
-- ✅ **Team collaboration** in game development
+- **Raycasting algorithm** and 3D projection
+- **Graphics programming** with MiniLibX
+- **Trigonometry** in game development
+- **Event-driven programming**
+- **Map parsing** and validation
+- **Performance optimization** for real-time rendering
+- **Game loop** and frame timing
+- **Team collaboration** in game development
 
 ## 👥 Authors
 
 This project was developed in collaboration by:
 
-**Clothilde Scache** (cscache)
+**Clothilde** (cscache)
 - GitHub: [@clothildesc](https://github.com/clothildesc)
 
-**Benjamin Suger** (bsuger)
+**Benjamin** (bsuger)
 - GitHub: [@BenjaminSuger](https://github.com/BenjaminSuger)
 
 ## 📖 References
