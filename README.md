@@ -2,9 +2,12 @@
 
 A 3D game engine inspired by the legendary **Wolfenstein 3D**, the first FPS ever made. This project uses raycasting to create a dynamic 3D view inside a maze from a first-person perspective.
 
+![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
+![MiniLibX](https://img.shields.io/badge/MiniLibX-000000?style=for-the-badge&logo=42&logoColor=white)
+
 ## 📋 Description
 
-**Cub3D** is a 42 School project that introduces students to the fundamentals of raycasting, graphics programming, and game development. Inspired by the iconic Wolfenstein 3D (1992), this project demonstrates:
+**Cub3D** is a 42 School project that introduces to the fundamentals of raycasting, graphics programming, and game development. Inspired by the iconic Wolfenstein 3D (1992), this project demonstrates:
 
 - **Raycasting algorithm** for 3D rendering
 - Real-time graphics with **MiniLibX**
