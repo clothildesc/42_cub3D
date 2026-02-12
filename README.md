@@ -18,13 +18,13 @@ A 3D game engine inspired by the legendary **Wolfenstein 3D**, the first FPS eve
 
 This project recreates the immersive experience of navigating through a 3D maze using only 2D map data and mathematical projections.
 
-**🤝 This project was developed in collaboration with [@BenjaminSuger](https://github.com/BenjaminSuger).**
+**This project was developed in collaboration with [@BenjaminSuger](https://github.com/BenjaminSuger).**
 
-**📦 Original repository: [BenjaminSuger/CUB3D](https://github.com/BenjaminSuger/CUB3D)**
+**Original repository: [BenjaminSuger/CUB3D](https://github.com/BenjaminSuger/CUB3D)**
 
 <img width="1183" height="807" alt="image" src="https://github.com/user-attachments/assets/bac0edbc-625d-47b5-a0c2-85147a8a116c" />
 
-## 🚀 Features
+## ✨ Features
 
 ### Mandatory Part
 - **First-person 3D rendering** using raycasting
@@ -37,43 +37,12 @@ This project recreates the immersive experience of navigating through a 3D maze 
 - **Map parsing** from `.cub` configuration files
 - **Window management** (close with ESC or window close button)
 
-### Bonus Features ✨
+### Bonus Features
 - **Minimap** with real-time player position and field of view
 - **Animated doors** that can be opened/closed
 - **Mouse controls** for camera rotation
 - **Enhanced textures** and visual effects
 - **Teleportation doors** (special door mechanics)
-
-## 📁 Project Structure
-
-```
-.
-├── Makefile                    # Build configuration
-├── maps/                       # Map files (.cub)
-├── textures/                   # Wall texture assets
-├── libft/                      # Custom C library
-├── cub3d_mandatory/           # Mandatory part
-│   ├── includes/
-│   │   ├── cub3d.h           # Main structures
-│   │   ├── game.h            # Game engine functions
-│   │   └── parsing.h         # Map parsing
-│   ├── sources/
-│   │   ├── game/             # Game engine
-│   │   │   ├── cast_rays.c   # Raycasting algorithm
-│   │   │   ├── display_game.c
-│   │   │   ├── run_game.c
-│   │   │   └── manage_moves.c
-│   │   └── parsing/          # Map validation
-│   └── main.c
-└── cub3d_bonus/               # Bonus part
-    ├── includes/
-    ├── sources/
-    │   ├── game/
-    │   ├── minimap/          # Minimap rendering
-    │   ├── door/             # Door mechanics
-    │   └── parsing/
-    └── main_bonus.c
-```
 
 ## 🎮 Map File Format
 
@@ -173,55 +142,6 @@ This generates the `cub3D` or `cub3D_bonus` executable.
 - `ESC` - Close the game
 - Click `X` on window - Close the game
 
-## 🏗️ Technical Implementation
-
-### Raycasting Algorithm
-
-The raycasting engine works by:
-
-1. **Casting rays** from the player's position at each screen column
-2. **Detecting wall intersections** using DDA (Digital Differential Analysis)
-3. **Calculating wall distance** (with fisheye correction)
-4. **Projecting walls** to screen height based on distance
-5. **Texture mapping** to render textured walls
-
-```
-Player Position → Cast Ray → Find Wall Hit → Calculate Distance → Render Column
-```
-
-### Key Concepts
-
-**Ray Direction:**
-```c
-ray_angle = player.angle - (FOV / 2) + (x * FOV / SCREEN_WIDTH);
-ray_dir.x = cos(ray_angle);
-ray_dir.y = sin(ray_angle);
-```
-
-**Distance Calculation:**
-- Corrected for fisheye effect using perpendicular distance
-- Separate checks for horizontal and vertical grid lines
-
-**Texture Mapping:**
-- Calculate hit position on wall
-- Map to texture coordinates
-- Scale texture height to screen projection
-
-### Minimap (Bonus)
-
-The minimap uses:
-- **Bresenham's line algorithm** for ray visualization
-- **Cohen-Sutherland clipping** for viewport boundaries
-- Real-time player position tracking
-
-### Door System (Bonus)
-
-Animated doors with:
-- Open/close animations
-- Collision detection
-- Timer-based automatic closing
-- Teleportation mechanics (special doors)
-
 ## 🎨 Example Maps
 
 The project includes several test maps:
@@ -239,46 +159,6 @@ The parser validates:
 - Closed map (surrounded by walls)
 - Single player start position
 - No invalid characters
-
-## 🔍 Raycasting Math
-
-### FOV (Field of View)
-Default: 60° (π/3 radians)
-
-### Wall Height Projection
-```
-wall_height = (TILE_SIZE * SCREEN_HEIGHT) / perpendicular_distance
-```
-
-### Fisheye Correction
-```
-perpendicular_distance = distance * cos(ray_angle - player_angle)
-```
-
-## ⚙️ Performance
-
-- **Resolution**: 1920x1080 (configurable)
-- **Frame rate**: 60+ FPS (depends on map complexity)
-- **Ray count**: One ray per screen column
-
-## 🐛 Known Limitations
-
-- No support for multiple floor levels
-- Static lighting (no dynamic shadows)
-- Simple collision detection (grid-based)
-- Limited to orthogonal walls
-
-## 🎓 Learning Outcomes
-
-This project teaches:
-- **Raycasting algorithm** and 3D projection
-- **Graphics programming** with MiniLibX
-- **Trigonometry** in game development
-- **Event-driven programming**
-- **Map parsing** and validation
-- **Performance optimization** for real-time rendering
-- **Game loop** and frame timing
-- **Team collaboration** in game development
 
 ## 👥 Authors
 
